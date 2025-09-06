@@ -1,6 +1,30 @@
 "use strict";
 console.log("start app");
 
+let num1 = +prompt("number?");
+let operator;
+let num2;
+
+do {
+  operator = prompt("operator?");
+
+  if (!checkOperator(operator)) {
+    break;
+  }
+
+  num2 = prompt("number?") == "" ? null : +prompt("number?");
+
+  if (checkNumber(num1) && checkNumber(num2)) {
+    num1 = calcTwoNumbers(num1, num2, operator);
+  } else {
+    break;
+  }
+} while (true);
+
+alert(num1);
+
+console.log("end app");
+
 function checkOperator(operator) {
   switch (operator) {
     case "+":
@@ -53,27 +77,3 @@ function calcTwoNumbers(num1, num2, operator) {
       break;
   }
 }
-
-let num1 = +prompt("number?");
-let operator;
-let num2;
-
-do {
-  operator = prompt("operator?");
-
-  if (!checkOperator(operator)) {
-    break;
-  }
-
-  num2 = prompt("number?") == "" ? null : +prompt("number?");
-
-  if (checkNumber(num1) && checkNumber(num2)) {
-    num1 = calcTwoNumbers(num1, num2, operator);
-  } else {
-    break;
-  }
-} while (true);
-
-alert(num1);
-
-console.log("end app");
