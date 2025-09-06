@@ -37,7 +37,6 @@ function checkOperator(operator) {
       return true;
 
     default:
-      //   alert("wrong operator");
       console.log("wrong operator: ", operator);
       return false;
   }
@@ -45,7 +44,6 @@ function checkOperator(operator) {
 
 function checkNumber(num) {
   if (typeof num === "number") {
-    // console.log()
     return true;
   } else {
     return false;
