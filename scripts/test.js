@@ -45,6 +45,10 @@ describe("checkOperator function", function () {
     assert.equal(checkOperator(null), false);
 
     assert.equal(checkOperator(undefined), false);
+
+    assert.equal(checkOperator("test"), false);
+
+    assert.equal(checkOperator("2"), false);
   });
 });
 
