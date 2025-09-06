@@ -12,7 +12,7 @@ do {
     break;
   }
 
-  num2 = prompt("number?") == "" ? null : +prompt("number?");
+  num2 = checkNullStr(prompt("number?"));
 
   if (checkNumber(num1) && checkNumber(num2)) {
     num1 = calcTwoNumbers(num1, num2, operator);
@@ -75,5 +75,15 @@ function calcTwoNumbers(num1, num2, operator) {
     default:
       console.log("calculator: wrong format");
       break;
+  }
+}
+
+function checkNullStr(num) {
+  if (num == "") {
+    return null;
+  } else if (num == "0") {
+    return 0;
+  } else {
+    return +num;
   }
 }

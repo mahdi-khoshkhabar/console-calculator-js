@@ -87,3 +87,12 @@ describe("calcTwoNumbers function", function () {
     assert.equal(calcTwoNumbers(9, 0, "**"), 1);
   });
 });
+
+describe("checkNullStr function", function () {
+  it("emtpy string", function () {
+    assert.equal(checkNullStr(""), null);
+  });
+  it('"0"', function () {
+    assert.equal(checkNullStr("0"), 0);
+  });
+});
